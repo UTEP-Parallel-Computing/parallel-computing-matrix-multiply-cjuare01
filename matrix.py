@@ -1,6 +1,7 @@
 # Charlie Juarez
 # Restrictions: Integer matrices, defined matrices
 import time
+import random
 
 class Matrix(object):
     row = 0
@@ -39,7 +40,7 @@ def create_matrix():
     for num1 in range(row):
         temp_arr = []
         for num2 in range(column):
-            temp_arr.append(int(input('Provide a number to input into the matrix: ')))
+            temp_arr.append(random.randint(99999999999999, 99999999999999999))
         matrix.append(temp_arr)
 
     matrix = Matrix(row, column, matrix)
