@@ -101,7 +101,7 @@ def parallel_matrix(matrix1, matrix2, threadnum):
     # Fill in the values of the product of matrices
     with pymp.Parallel(threadnum) as p:
         # Iterate through rows of matrix1
-        for i in range(matrix1.row):
+        for i in p.range(matrix1.row):
             # Iterate through columns of matrix2
             for j in range(matrix2.column):
                 # Iterate through rows of matrix2
